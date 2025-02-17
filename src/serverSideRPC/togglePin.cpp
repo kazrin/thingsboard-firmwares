@@ -61,8 +61,6 @@ void callback(char *topic, byte *payload, unsigned int length)
     if (doc["method"] == "toggle")
     {
         pinState.toggle();
-        String response = pinState.stringify();
-        pubsubClient.publish("v1/devices/me/attributes", response.c_str());
     }
 }
 
