@@ -9,7 +9,6 @@
 #include "utils.h"
 
 const char *FW_TITLE = "TEST";
-const char *FW_VERSION = "1.0.0";
 
 Preferences preferences;
 
@@ -165,7 +164,6 @@ void setup()
         preferences.putString("access_token", BasicMQTT::user_name);
     }
 #endif
-
     // Connect to WiFi
     WiFi.begin(
         preferences.getString("ssid"),
